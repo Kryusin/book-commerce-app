@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: ../Dockerfile/web.Dockerfile
+    working_dir: /web
+    ports:
+      - 3000:3000
+    volumes:
+      - ./web:/web
+    tty: true
